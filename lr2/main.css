@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    
+}
+main {
+    flex: 1 0 auto;
+    background-color: wheat;
+}
+footer {
+    flex-shrink: 0;
+}
+.header{
+    display: flex;
+    background-color: #567DFF;
+    align-items: center;
+    /* height: auto; */
+}
+.header_logo,
+.header_text {
+    vertical-align: middle;  
+}
+.header_logo{
+    float: left;
+}
+.header_text {
+    color: aliceblue;
+    font-size: 34px;
+    margin: 0 auto;
+    /* display: inline-block;
+    vertical-align: middle; */
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 1265px;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 20px auto;
+}
+.feedback-form{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.input{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.checkbox{
+    display: block;
+    
+}
+.checkbox-block{
+    max-width: 80px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 20px;
+}
+.feedback-form-btn{
+    background-color: #567DFF;
+    margin: 0 auto;
+    max-width: 200px;
+    width: 100%;
+    font-size: 30px;
+    color: azure;
+    border-radius: 30px;
+    transition: all .3s;
+}
+.feedback-form-btn:hover,
+.feedback-form-btn:focus{
+    transform: scale(1.1);
+    background-color: #56ffcf;
+}
+.btn-to-page2{
+    display: flex;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+.arrow{
+    max-width: 100px;
+}
+.page2-text{
+    font-size: 34px;
+}
+.footer{
+    text-align: center;
+    background-color: #90B3E7;
+    padding: 10px;
+    font-size: 18px;
+}
