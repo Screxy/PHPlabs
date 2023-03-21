@@ -20,22 +20,6 @@
     <main>
         <section class="main-content">
             <?php
-                function brackets($example){
-                    $brackets_index = [];
-                    $brackstak = [];
-                    
-                    for ($i = 0; $i < strlen($example); $i++) {
-                        if ($example[$i] == "("){
-                            array_push($brackstak, $i);
-                        }
-                        if ($example[$i] == ")"){
-                            $lastbrack = array_pop($brackstak);
-                            array_unshift($brackets_index, $lastbrack." ".$i);
-                        };
-                    }
-                    array_unshift($brackets_index, "0 ".strlen($example)-1);
-                    return $brackets_index;
-                };
                 function equalplus($example){
                     $res = 0;
                     $nums = explode("+", $example); 
@@ -78,21 +62,9 @@
                     }
                     return $res;           
                 }
-                function equal($example, $bracks){
-                    $indexs = explode(" ", array_shift($bracks));
-                    $fstindx = (int)($indexs[0]);
-                    $lstindx = (int)($indexs[1]);
-                    while (!empty($bracks) && explode(" ", $bracks[0])[0] > $fstindx && explode(" ", $bracks[0])[1] < $lstindx) {
-                        $nested = array_shift($bracks);
-                        $nested_res = equal(substr($example, $nested[0], $nested[1] - $nested[0] + 1), [$nested]);
-                        $example = substr_replace($example, $nested_res, $nested[0], $nested[1] - $nested[0] + 1);
-                        $lstindx = $lstindx - ($nested[1] - $nested[0] + 1) + strlen((string)$nested_res);
-                    }
-                    return equalplus(substr($example, $fstindx, $lstindx - $fstindx + 1));
-                }
-                $primer = "4+(4+2)";
-                $brackets_index = brackets($primer);
-                echo "результат ".equal($primer, $brackets_index);
+                
+                $primer = "4+4+2";
+                echo "результат ".equalplus($primer);
             ?>
             </p>
         </section>
