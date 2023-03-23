@@ -11,18 +11,18 @@ body{
     flex-direction: column;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    color: #000000;
+    color: #ffffff;
 }
 main {
     flex: 1 0 auto;
-    background-color: wheat;
+    background-color: rgb(0, 0, 0);
 }
 footer {
     flex-shrink: 0;
 }
 .header{
     display: flex;
-    background-color: #567DFF;
+    background-color: #000000;
     align-items: center;
     /* height: auto; */
 }
@@ -49,75 +49,85 @@ footer {
     margin: 20px auto;
     font-size: 30px;
 }
-@import url(https://fonts.googleapis.com/css?family=Roboto:100);
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+
+.calcutator{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
 }
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+
+.result{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    height: 39%;
+    margin-right: 33%;
 }
-html {
-  font-family: 'Roboto';
-  font-weight: 100;
+
+.result span{
+     font-size: 75px;
+     justify-self: flex-end;
 }
-body {
-  display: flex;
-  justify-content: center;
-  margin-top: 1em;
-  font-size: 2em;
-  background-color: #bbb;
+.buttons{
+    width: 35%;
+    height: 60%;
+    align-self: center;
+    justify-self: center;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
-.calculator {
-  display: flex;
-  margin: 200px auto;
-  flex-wrap: wrap;
-  flex-direction: row;
-  width: 300px;
-  box-shadow: 0px 3px 10px 3px #aaa;
-  border-right: 0.01em solid #333;
-  border-bottom: 0.01em solid #333;
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    border-radius: 100%;
+    width: 105px;
+    height: 105px;
+    padding: 5px;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
 }
-.result {
-  width: 100%;
-  background-color: #000;
-  min-height: 2em;
-  color: white;
+
+.item1 {
+    background-color: #a5a5a5;
+    border: none;
 }
-.result > p {
-  padding: 0 1em;
-  text-align: right;
-  line-height: 2em;
+.dot{
+    text-decoration: none;
 }
-span {
-  box-sizing: border-box;
-  text-align: center;
-  cursor: pointer;
-  width: 25%;
-  background-color: #ccc;
-  line-height: 2em;
-  border-top: 0.01em solid #333;
-  border-left: 0.01em solid #333;
+.negative,.clear{
+    color: #000000;
 }
-.operator {
-  background-color: #FF9500;
-  color: white;
+.percent {
+    background-color: #a5a5a5;
+    border: none;
+    color: black;
 }
-.double {
-  width: 50%;
+.item3 {
+    background-color: #ff9f0a;
+    border: none;
 }
-.grey {
-  background-color: #aaa;
+.numbers, .dot{
+    background-color: #343434;
+    border: none;
 }
-.clicked {
-  background-color: darken(orange, 10%);
+.itemZero {
+    width: 200px;
+    border-radius: 75px;   
+    grid-column: span 2;
+    border: none;
 }
+
 .footer{
     text-align: center;
-    background-color: #90B3E7;
+    background-color: black;
+    color: white;
     padding: 10px;
     font-size: 18px;
 }

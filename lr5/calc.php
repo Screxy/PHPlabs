@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP 4</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="reset.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-</head>
-<body>
-    <header class="header">
-        <img src="img\mospolytech_logo_white.png" alt="Логотип МПУ" class="header_logo">
-        <h1 class="header_text">1.2. Домашняя работа: Solve the equation.</h1>
-    </header>
-    <main>
-        <section class="main-content">
-            <?php
+<?php
                 function equalPlus($example){
                     $res = 0;
                     $nums = explode("+", $example); 
@@ -99,14 +78,6 @@
                     }
                     return equalPlus($example);
                 }
-                $primer = "3*((9+9)*2/2)";
-                echo "<br> <br> <br> Результат ".equal($primer);
+                // echo "hello from backend";
+                echo equal($_POST["res"]);           
             ?>
-            </p>
-        </section>
-    </main>
-    <footer class="footer">
-        <p class="footer_text"> Выполнил: Данцаранов Владислав</p>
-    </footer>
-</body>
-</html>
