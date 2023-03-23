@@ -6,7 +6,6 @@ const url = "calc.php";
 function sendRequest(url, primer){
     const xhr = new XMLHttpRequest();
     let sendingPrimer = `res=${primer}`;
-    console.log(sendingPrimer);
     xhr.open('POST', url, true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.send(sendingPrimer);

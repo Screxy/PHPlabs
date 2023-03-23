@@ -1,13 +1,10 @@
 <?php
                 function equalPlus($example){
                     $res = 0;
+                    $example = str_replace(" ", "+",  $example); //почему приходит вместо плюсов пробелы(
                     $nums = explode("+", $example); 
-                    // var_dump($nums);
-                    // echo "я в плюсах смотрю массив<br>";
                     foreach($nums as $num){
                         if( !is_numeric($num)) {
-                            // echo "я почемуто тут в плюсах <br>";
-
                             $num = equalMinus($num);
                         }
                         $res += $num;
@@ -78,6 +75,5 @@
                     }
                     return equalPlus($example);
                 }
-                // echo "hello from backend";
                 echo equal($_POST["res"]);           
             ?>
