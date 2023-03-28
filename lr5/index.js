@@ -22,6 +22,9 @@ document.addEventListener("click", function(event){
     if (event.target.closest(".clear")){
         clear();
     }
+    if (event.target.closest(".dellast")){
+        clearLast();
+    }
     if (event.target.closest(".numbers")){
         let atr = event.target.getAttribute("value");
         getValue(atr);
@@ -106,6 +109,14 @@ function openBrackets(){
         }
     }
     return brackL == brackR;    
+}
+function clearLast(){
+    if (value.length == 1 || value == ""){
+        clear();
+        return;
+    }
+    value = value.substring(0, value.length-1);
+    result.innerHTML = value;
 }
 
 
