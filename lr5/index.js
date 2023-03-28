@@ -45,6 +45,17 @@ function getValue(el){
         if (getLastS() == "(" && el == ")"){
             value = value.substring(0, value.length-1);
             if (value == false) value = "0";
+            console.log(value);
+            result.innerHTML = value;
+            return;
+        }
+        if (getLastS() == ")" && isNumber(el)){
+            value = value + "*" + el;
+            result.innerHTML = value;
+            return;
+        }
+        if (getLastS() == ")"){
+            value = value + el;
             result.innerHTML = value;
             return;
         }
@@ -71,6 +82,11 @@ function isLastSign(){
 function isLastNumber(){
     const signs = "1234567890"
     return signs.includes(getLastS());
+}
+
+function isNumber(ell){
+    const signs = "1234567890"
+    return signs.includes(ell);
 }
 
 function clear(){
