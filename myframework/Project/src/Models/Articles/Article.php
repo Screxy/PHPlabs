@@ -13,7 +13,7 @@
         public function __set($name, $value){
             $camelCaseName = $this->underscoreToCamelCase($name);
             $this->$camelCaseName = $value;
-            echo "пытаюсь создать свойство $name со знаечение $value";
+            // echo "пытаюсь создать свойство $name со знаечение $value";
         }
 
         private function underscoreToCamelCase(string $source): string{
