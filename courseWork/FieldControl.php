@@ -74,8 +74,8 @@ class FieldControl implements Field
         if ($res->num_rows > 0) {
             while ($row = $res->fetch_assoc()) {
                 if ($row['id_field'] == $fieldId) {
-                    $this->deleteHashtag($row['id_#']);
                     $hashtagId = $row['id_#'];
+                    $this->deleteHashtag($hashtagId);
                     $this->conn->query("DELETE FROM `field_#` WHERE `id_field` = '$fieldId' AND `id_#` = '$hashtagId'");
                     // echo "типо удалил ".$hashtagId." хэш и $fieldId облзна в табле филдхэш<br>";
                 }

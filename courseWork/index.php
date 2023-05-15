@@ -9,7 +9,7 @@ include 'header.html';
                 <label class="form__label">Like<input class="form__input" type="checkbox" name="like" value="True"></label>
                 <label class="form__label">Подтверждаю удаление<input class="form__input" type="checkbox" name="delete" value="Delete"></label>
                 <label class="form__label">Область знаний
-                    <select name="field" id="" class="form__select">
+                    <select name="field" class="form__select">
                         <?php
                         require_once 'FieldControl.php';
                         $FieldControlObj = new FieldControl();
