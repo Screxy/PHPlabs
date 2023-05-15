@@ -1,8 +1,6 @@
 <?php
 
-require_once 'interface.php';
-
-class FieldControl implements Field
+class FieldControl
 {
     public $conn;
 
